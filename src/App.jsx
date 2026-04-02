@@ -3517,12 +3517,13 @@ function EventDashboardBanner({ theme }) {
 
 function buildPkEvents() {
   const islamicDefs = [
-    { id:"eid_ul_fitr", name:"Eid ul Fitr",       hMonth:10, hDay:1,  icon:"\u{1F319}", color:"#D4A843", category:"religious", tip:"Biggest sales event of the year. Start campaign 3-4 weeks early. Gift sets are bestsellers." },
-    { id:"eid_ul_adha", name:"Eid ul Adha",        hMonth:12, hDay:10, icon:"\u{1F411}", color:"#c084fc", category:"religious", tip:"Premium gifting season. Bundle offers perform well. Gifting fragrances is a popular Eid ul Adha tradition." },
-    { id:"ramadan",     name:"Ramadan Mubarak",    hMonth:9,  hDay:1,  icon:"\u{2728}",  color:"#fbbf24", category:"religious", tip:"Peak demand comes in the last 10 days for Eid prep. Special Ramadan packaging works well." },
-    { id:"shabe_barat", name:"Shab-e-Barat",       hMonth:8,  hDay:15, icon:"\u{1F32F}", color:"#a78bfa", category:"religious", tip:"Attar gifting is a strong tradition on this night. Limited edition packaging sells well." },
-    { id:"shabe_qadr",  name:"Shab-e-Qadr",        hMonth:9,  hDay:27, icon:"\u{1F4AB}", color:"#60a5fa", category:"religious", tip:"The 27th night of Ramadan. Spiritual fragrances and attar are trending." },
-    { id:"eid_milad",   name:"Eid Milad-un-Nabi",  hMonth:3,  hDay:12, icon:"\u{1F49A}", color:"#4ade80", category:"religious", tip:"Naat gathering gifts. Ittar and bukhoor are popular. A strong community gifting season." },
+// gregorianEvs array mein ye replace karo:
+       { id:"new_year",     name:"New Year",         month:11, day:26, icon:"🎆", color:"#6366F1", category:"seasonal", isIslamic:false, gDate:new Date(new Date().getFullYear(),11,26), tip:"Year-end campaigns and new year promotions work great for all businesses.", flexible:true },
+       { id:"black_friday", name:"Black Friday",     month:10, day:25, icon:"🛍️", color:"#1F2937", category:"seasonal", isIslamic:false, gDate:new Date(new Date().getFullYear(),10,25), tip:"Biggest sales event globally. Prepare campaigns 2 weeks in advance.", flexible:true },
+       { id:"summer_sale",  name:"Summer Sale",      month:5,  day:1,  icon:"☀️", color:"#F97316", category:"seasonal", isIslamic:false, gDate:new Date(new Date().getFullYear(),5,1),  tip:"Seasonal promotions and discounts for summer products.", flexible:true },
+       { id:"winter_sale",  name:"Winter Campaign",  month:10, day:15, icon:"❄️", color:"#3B82F6", category:"seasonal", isIslamic:false, gDate:new Date(new Date().getFullYear(),10,15), tip:"Winter promotions and year-end push for maximum revenue.", flexible:true },
+       { id:"mothers_day",  name:"Mother's Day",     month:4,  day:11, icon:"🌸", color:"#EC4899", category:"occasion",  isIslamic:false, gDate:new Date(new Date().getFullYear(),4,11), tip:"Gift campaigns and special promotions for mother's day shoppers.", flexible:false },
+       { id:"valentines",   name:"Valentine's Day",  month:1,  day:14, icon:"💝", color:"#EF4444", category:"occasion",  isIslamic:false, gDate:new Date(new Date().getFullYear(),1,14),  tip:"Perfect for lifestyle, gifts, and luxury products campaigns.", flexible:false },
   ];
 
   const islamicEvs = islamicDefs.map(e => {
