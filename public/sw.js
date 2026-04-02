@@ -3,8 +3,8 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png'
+  '/icons/icon-500x500.png',
+  '/icons/icon-500x500.png'
 ];
 
 self.addEventListener('install', event => {
@@ -37,8 +37,8 @@ self.addEventListener('push', event => {
   const title = data.title || 'BrandFlow Portal';
   const options = {
     body: data.body || '',
-    icon: '/icons/icon-192x192.png',
-    badge: '/icons/icon-72x72.png',
+    icon: '/icons/icon-500x500.png',
+    badge: '/icons/icon-500x500.png',
     vibrate: [200, 100, 200],
     data: data.data || {}
   };
